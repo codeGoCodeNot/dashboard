@@ -69,8 +69,8 @@ main {
   justify-content: space-between;
 }
 
-.announcements p,
-.trending p {
+.announcements .title,
+.trending .title {
   margin-bottom: 20px;
 }
 
@@ -87,7 +87,6 @@ main {
   padding: 15px;
   box-shadow: 0 2px 6px rgba(255, 191, 71, 0.3);
   color: #f0e6d2;
-  line-height: 1.4;
 }
 
 .announcement-title {
@@ -98,7 +97,32 @@ main {
 
 .short-line {
   width: 85%;
-  margin: 0.7rem auto; /* centers the line */
+  margin: 0.7rem auto;
   border: none;
-  border-top: 1px solid rgba(255, 191, 71, 0.25); /* subtle gold with low opacity */
+  border-top: 1px solid rgba(255, 191, 71, 0.25);
+}
+
+.trending-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: linear-gradient(135deg, #3b3223, #2a2419);
+  border-left: 4px solid #ffbf47;
+  padding: 10px 14px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(255, 191, 71, 0.25);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  margin-bottom: 10px;
+}
+
+.trending-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(255, 191, 71, 0.4);
+}
+
+.trending-item .icon {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 191, 71, 0.5);
 }

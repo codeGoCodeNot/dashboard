@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Dashboard</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
       rel="stylesheet"
@@ -13,6 +13,7 @@
   </head>
   <body>
     <div class="grid-container">
+      <!-- Sidebar -->
       <aside>
         <div class="navigation dashboard">
           <img
@@ -30,90 +31,80 @@
           />
           <p>Home</p>
         </div>
-
         <div class="navigation profile">
           <img
             class="logo"
             src="https://cdn.jsdelivr.net/npm/@mdi/svg/svg/card-account-details.svg"
-            alt="Card Account Details icon"
+            alt="Profile"
           />
           <p>Profile</p>
         </div>
-
         <div class="navigation messages">
           <img
             class="logo"
             src="https://cdn.jsdelivr.net/npm/@mdi/svg/svg/message.svg"
-            alt="Message icon"
+            alt="Messages"
           />
           <p>Messages</p>
         </div>
-
         <div class="navigation history">
           <img
             class="logo"
             src="https://cdn.jsdelivr.net/npm/@mdi/svg/svg/history.svg"
-            alt="History Icon"
+            alt="History"
           />
           <p>History</p>
         </div>
-
         <div class="navigation tasks">
           <img
             class="logo"
             src="https://cdn.jsdelivr.net/npm/@mdi/svg/svg/calendar-check.svg"
-            alt="Calendar Check Icon"
+            alt="Tasks"
           />
           <p>Tasks</p>
         </div>
-
         <div class="navigation communities">
           <img
-            src="https://cdn.jsdelivr.net/npm/@mdi/svg/svg/account-group.svg"
-            alt="Account Group Icon"
             class="logo"
+            src="https://cdn.jsdelivr.net/npm/@mdi/svg/svg/account-group.svg"
+            alt="Communities"
           />
           <p>Communities</p>
         </div>
-
         <div class="navigation settings">
           <img
-            src="https://cdn.jsdelivr.net/npm/@mdi/svg/svg/cog.svg"
-            alt="Cog Icon"
             class="logo"
+            src="https://cdn.jsdelivr.net/npm/@mdi/svg/svg/cog.svg"
+            alt="Settings"
           />
-
           <p>Settings</p>
         </div>
-
         <div class="navigation support">
           <img
-            src="https://cdn.jsdelivr.net/npm/@mdi/svg/svg/help-box.svg"
-            alt="Help Box Icon"
             class="logo"
+            src="https://cdn.jsdelivr.net/npm/@mdi/svg/svg/help-box.svg"
+            alt="Support"
           />
           <p>Support</p>
         </div>
-
         <div class="navigation privacy">
           <img
             class="logo"
             src="https://cdn.jsdelivr.net/npm/@mdi/svg/svg/shield-check.svg"
-            alt="Shield Check Icon"
+            alt="Privacy"
           />
-
           <p>Privacy</p>
         </div>
       </aside>
 
+      <!-- Header -->
       <header>
         <div class="search-bar">
           <img
             class="logo"
             src="https://cdn.jsdelivr.net/npm/@mdi/svg/svg/search-web.svg"
-            alt="Search Web Icon"
+            alt="Search Icon"
           />
-
           <form action="/submit" method="post">
             <input
               type="search"
@@ -123,21 +114,18 @@
               required
             />
           </form>
-
           <div class="notification">
             <img
               class="bell-logo"
               src="https://cdn.jsdelivr.net/npm/@mdi/svg/svg/bell-ring.svg"
-              alt="Bell Ring Icon"
+              alt="Notification Icon"
             />
-
             <img
               class="profile-pic"
               src="https://manga-jam.com/wp-content/uploads/part189/how_draw_mugen_samurai_champloo_11.jpg"
               alt="Mugen"
               width="40"
             />
-
             <p>Johnsen Berdin</p>
           </div>
         </div>
@@ -153,10 +141,8 @@
           </div>
           <div class="text">
             <p>Hi there,</p>
-
             <p>Johnsen Berdin (@mugen.odelle)</p>
           </div>
-
           <div class="button-container">
             <button>New</button>
             <button>Upload</button>
@@ -165,6 +151,7 @@
         </div>
       </header>
 
+      <!-- Main -->
       <main>
         <p>My projects</p>
         <div class="content">
@@ -177,22 +164,101 @@
         </div>
 
         <div class="container">
+          <!-- Announcements -->
           <div class="announcements">
-            <p>Announcements</p>
+            <p class="title">Announcements</p>
+
             <div class="announcement-content">
               <p class="announcement-title">Site maintenance</p>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <p>
+                We’re doing some quick maintenance magic 🛠️ on August 12, 2025
+                (2–4 AM UTC). Expect a few hiccups — we’ll be back before your
+                coffee gets cold.
+              </p>
               <hr class="short-line" />
-              <p class="announcement-title">Community share day</p>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+
+            <div class="announcement-content">
+              <p class="announcement-title">Community Share Day</p>
+              <p>
+                Join us this Friday to showcase your projects, exchange tips,
+                and meet other creators. Snacks and good vibes included. 🍪
+              </p>
               <hr class="short-line" />
-              <p class="announcement-title">Updated Privacy</p>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+
+            <div class="announcement-content">
+              <p class="announcement-title">Updated Privacy Policy</p>
+              <p>
+                We’ve made a few changes to keep your data safer than ever.
+                Check out the <a href="#">full policy</a> to stay informed.
+              </p>
             </div>
           </div>
+
+          <!-- Trending -->
           <div class="trending">
-            <p>Trending</p>
-            <div class="trending-content"></div>
+            <p class="title">Trending</p>
+
+            <div class="trending-item">
+              <img
+                class="icon"
+                src="https://png.pngtree.com/png-clipart/20220620/ourmid/pngtree-pink-cute-cat-icon-animal-png-yuri-png-image_5230763.png"
+                alt="Cat Icon"
+              />
+              <div>
+                <p>@tegan</p>
+                <p>World peace builder</p>
+              </div>
+            </div>
+
+            <div class="trending-item">
+              <img
+                class="icon"
+                src="https://ichef.bbci.co.uk/news/480/cpsprodpb/DBB7/production/_122074265_hi071843849.jpg.webp"
+                alt="Ape Icon"
+              />
+              <div>
+                <p>@jeffBezo</p>
+                <p>Amazon River</p>
+              </div>
+            </div>
+
+            <div class="trending-item">
+              <img
+                class="icon"
+                src="https://www.shutterstock.com/image-vector/elon-musk-new-twitter-logo-260nw-2349983485.jpg"
+                alt="Elon Musk Icon"
+              />
+              <div>
+                <p>@elonMask</p>
+                <p>Rocket science</p>
+              </div>
+            </div>
+
+            <div class="trending-item">
+              <img
+                class="icon"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSN9aCJ69mnM_2i_5H8kurCxw5TCa773_yNwQ&s"
+                alt="Zoro Icon"
+              />
+              <div>
+                <p>@joflaminggay</p>
+                <p>I'm lost</p>
+              </div>
+            </div>
+
+            <div class="trending-item">
+              <img
+                class="icon"
+                src="https://e7.pngegg.com/pngimages/13/178/png-clipart-spongebob-squarepants-illustration-graphy-computer-icons-sponge-bob-cartoon-spongebob-squarepants.png"
+                alt="spongebob"
+              />
+              <div>
+                <p>@sponjboobs</p>
+                <p>I love sponjBoobs</p>
+              </div>
+            </div>
           </div>
         </div>
       </main>
