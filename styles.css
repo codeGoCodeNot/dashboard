@@ -33,6 +33,7 @@ p {
 .grid-container {
   display: grid;
   grid-template-columns: minmax(100px, 275px) minmax(200px, 1fr);
+  grid-template-rows: 250px minmax(250px, 1fr);
   height: 100vh;
   background-color: rgba(26, 26, 26, 0.8);
 }
@@ -40,13 +41,15 @@ p {
 aside {
   display: grid;
   align-content: start;
-  background: url('https://i.imgur.com/jXqrsjy.jpg') center center/cover
-    no-repeat;
-  filter: brightness(0.7);
+  background-color: #1f2937; 
   height: 100vh;
   grid-auto-rows: 50px;
   color: #e6e1c5;
+  border: 2px solid rgba(255, 191, 71, 0.5);
+  box-shadow: 0 0 8px 2px rgba(255, 191, 71, 0.25);
+  border-radius: 8px;
 }
+
 
 .navigation {
   display: grid;
@@ -83,16 +86,17 @@ aside {
   display: flex;
   gap: 10px;
   padding: 10px 24px 20px;
-  justify-content: flex-start;
-  max-width: 700px;
+  align-items: center;
   width: 100%;
+  justify-content: space-between;
 }
 
 form {
   display: flex;
   gap: 10px;
-  justify-content: start;
-  width: 100%;
+  justify-content: flex-start;
+  min-width: 0;
+  flex-grow: 1;
 }
 
 #search-input {
@@ -108,6 +112,7 @@ form {
   width: auto;
   outline: none;
   transition: border-color 0.3s ease;
+  max-width: 800px;
 }
 
 #search-input:focus {
@@ -117,13 +122,19 @@ form {
 }
 
 header {
-  padding: 20px;
+  padding: 40px;
   width: 100%;
   background: linear-gradient(90deg, #2c1a00, #4b2e00);
   box-shadow: inset 0 -4px 10px rgba(0, 0, 0, 0.8);
   display: flex;
   flex-direction: column;
-}
+  border: 2px solid rgba(255, 191, 71, 0.5);
+  padding: 40px;
+  width: 100%;
+  background: linear-gradient(90deg, #2c1a00, #4b2e00);
+  box-shadow:
+    0 0 8px 2px rgba(255, 191, 71, 0.4), 
+    inset 0 -4px 10px rgba(0, 0, 0, 0.8);
 
 header .logo {
   width: 24px;
@@ -135,16 +146,47 @@ header .logo {
 .profile-pic {
   border-radius: 50%;
   border: 1px solid rgba(255, 182, 0, 0.5);
-  width: 40px;
-  height: 40px;
+  cursor: pointer;
 }
 
 .user {
   display: flex;
-  align-items: start;
+  align-items: center;
   padding: 20px 24px 0;
   gap: 10px;
   color: #f0e6d2;
+}
+
+.button-container {
+  margin-left: auto;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.button-container button {
+  background: linear-gradient(145deg, #b47b00, #ffbf47);
+  color: #1a1a1a;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 18px;
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+  cursor: pointer;
+  box-shadow: 0 3px 6px rgba(180, 123, 0, 0.6);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  height: 40px;
+}
+
+.button-container button:hover {
+  background: linear-gradient(145deg, #ffbf47, #b47b00);
+  box-shadow: 0 5px 12px rgba(255, 191, 71, 0.8);
+}
+
+.button-container button:active {
+  background: #a56e00;
+  box-shadow: none;
+  transform: translateY(1px);
 }
 
 .user .text p:first-child {
@@ -160,8 +202,17 @@ header .logo {
   font-family: 'Roboto', sans-serif;
 }
 
-.search-bar .logo {
+.search-bar .logo,
+.bell-logo {
   filter: invert(100%);
   width: 24px;
   height: 24px;
+  cursor: pointer;
+}
+
+.notification {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: auto;
 }
